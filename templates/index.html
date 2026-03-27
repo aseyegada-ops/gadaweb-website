@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GADA Web Development</title>
 <link rel="icon" href="{{ url_for ('static', filename='gada.jpeg') }}" alt="Gada logo"  width="300">
 <style>
@@ -43,6 +44,63 @@ background:#222;color:white;width:100%;
 .fun-btn:hover{transform:scale(1.05);box-shadow:0 0 15px #00aaff;}
 footer{margin-top:80px;padding:30px;background:black;text-align:center;}
 @keyframes fadeIn{from{opacity:0;} to{opacity:1;}}
+@media (max-width:768px) {
+	.container: padding:20px;
+}
+h1{
+	font-size:28px;
+    }
+} 
+@media (max-width:768px) {
+
+header{
+flex-direction:column;
+padding:15px;
+text-align:center;
+}
+
+nav button{
+display:block;
+margin:8px auto;
+font-size:18px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.hero button{
+width:90%;
+font-size:18px;
+}
+
+.tab{
+padding:30px 15px;
+}
+
+.services, .pricing{
+grid-template-columns:1fr;
+}
+
+.card, .price-card{
+padding:20px;
+}
+
+.dynamic-island{
+width:150px;
+font-size:12px;
+}
+
+.fun-btn{
+width:90%;
+font-size:18px;
+}
+
+}    
 </style>
 </head>
 <body>
@@ -63,9 +121,31 @@ footer{margin-top:80px;padding:30px;background:black;text-align:center;}
 <div class="dynamic-island" id="island"><span id="islandText">Welcome to GADA</span></div>
 
 <section class="hero" id="home">
-<h1>Professional Website Development</h1>
-<p>We build modern websites, web apps, and digital platforms to grow your business.</p>
-<button onclick="showTab('login')">Start Your Website</button>
+<h1>Build a Powerful Website for Your Business</h1>
+
+<p>
+We design fast, modern, and professional websites that help your business grow,
+attract customers, and stand out online.
+</p>
+<p>
+	I help build bussinesses grow online by creating fast, modern and afordable websites.
+</p>
+<p>
+	Whether you are a small bussiness, shop owner or startup.
+	I can build a professional website for.
+
+<div style="margin-top:30px;">
+<button onclick="showTab('login')" class="fun-btn">
+Start Your Website
+</button>
+
+<a href="https://wa.me/233209582333?text=Hello%20GADA,%20I%20want%20a%20website" target="_blank">
+<button class="fun-btn" style="margin-left:10px; background:#25D366;">
+Chat on WhatsApp
+</button>
+</a>
+</div>
+
 </section>
 
 <section id="about" class="tab">
@@ -106,16 +186,19 @@ footer{margin-top:80px;padding:30px;background:black;text-align:center;}
 <p>Email: kkgadashin@gmail.com</p>
 </section>
 
-<!-- LOGIN / WEBSITE REQUEST -->
 <section id="login" class="tab">
-<h2>Tell Us About Your Website</h2>
-<form action="/submit" method="POST">
-<div class="login-container">
-<textarea name="description" placeholder="Describe how you want your website to look" required></textarea>
-<input type="email" placeholder="Your Email" name="email" required>
-<button type="submit" class="fun-btn">Submit Request</button>
-</div>
-</form>
+<h2>Contact Me Directly</h2>
+
+<p style="margin-top:20px; font-size:18px;">
+Chat with me on WhatsApp to get your website started.
+</p>
+
+<a href="https://wa.me/233209582333?text=Hello%20GADA,%20I%20want%20a%20website" target="_blank">
+<button class="fun-btn" style="margin-top:20px; width:90%; font-size:20px;">
+Text Me on WhatsApp
+</button>
+</a>
+
 </section>
 
 <footer>© 2026 GADA Web Development</footer>
@@ -138,4 +221,4 @@ showTab("home");
 </body>
 </html>
 </style>
-</head>
+</head> 
