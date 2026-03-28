@@ -5,17 +5,6 @@ from email.message import EmailMessage
 
 app = Flask(__name__)
 
-@app.route("/admin")
-def admin():
-    if session.get("role") != "admin":
-        return "Access Denied"
-
-    db = get_db()
-
-    user_count = db.execute("SELECT COUNT(*) FROM users").fetchone()[0]
-
-    return render_template("admin.html", user_count=user_count)
-
 # -----------------------------
 # CREATE DATABASE
 # -----------------------------
